@@ -4,14 +4,22 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Text</th>
+    <th>Location</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Cost</th>
      <th colspan="2"></th>
   </tr>
  
   <% @events.each do |event| %>
     <tr>
       <td><%= event.title %></td>
-      <td><%= event.text %></td>
+      <td><%= event.location %></td>
+      <td><%= event.description %></td>
+      <td><%= event.date %></td>
+      <td><%= event.time %></td>
+      <td><%= event.cost %></td>
        <td><%= link_to 'Show', event_path(event) %></td>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event_path(event),
